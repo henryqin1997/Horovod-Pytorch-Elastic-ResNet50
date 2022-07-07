@@ -26,13 +26,13 @@ parser.add_argument('--fp16-allreduce', action='store_true', default=False,
                     help='use fp16 compression during allreduce')
 
 # Default settings from https://arxiv.org/abs/1706.02677.
-parser.add_argument('--batch-size', type=int, default=32,
+parser.add_argument('--batch-size', type=int, default=1024,
                     help='input batch size for training')
-parser.add_argument('--val-batch-size', type=int, default=32,
+parser.add_argument('--val-batch-size', type=int, default=1024,
                     help='input batch size for validation')
 parser.add_argument('--epochs', type=int, default=90,
                     help='number of epochs to train')
-parser.add_argument('--base-lr', type=float, default=0.0125,
+parser.add_argument('--base-lr', type=float, default=0.4,
                     help='learning rate for a single GPU')
 parser.add_argument('--warmup-epochs', type=float, default=5,
                     help='number of warmup epochs')
